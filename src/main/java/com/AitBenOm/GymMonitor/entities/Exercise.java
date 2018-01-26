@@ -13,14 +13,13 @@ public class Exercise {
     private Long idExercise;
     private String exerciseName;
 
-
     @ManyToOne
       private Program program;
-
-
     @JsonIgnore
     @OneToMany(mappedBy="exercise",fetch=FetchType.EAGER)
     private List<Charge> charges;
+
+
 
     public List<Charge> getCharges() {
         return charges;

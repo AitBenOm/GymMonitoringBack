@@ -13,7 +13,7 @@ public class Charge {
     @Temporal(TemporalType.DATE)
     private Date lastModification;
 
-    @ManyToOne(cascade= CascadeType.ALL,fetch=FetchType.EAGER)
+    @ManyToOne()
     private Exercise exercise;
 
     public Long getIdLoad() {
