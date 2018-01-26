@@ -8,7 +8,7 @@ public class Charge {
 
     @Id
     @GeneratedValue
-    private Long idLoad;
+    private int idLoad;
     private String charge;
     @Temporal(TemporalType.DATE)
     private Date lastModification;
@@ -16,11 +16,11 @@ public class Charge {
     @ManyToOne()
     private Exercise exercise;
 
-    public Long getIdLoad() {
+    public int getIdLoad() {
         return idLoad;
     }
 
-    public void setIdLoad(Long idLoad) {
+    public void setIdLoad(int idLoad) {
         this.idLoad = idLoad;
     }
 

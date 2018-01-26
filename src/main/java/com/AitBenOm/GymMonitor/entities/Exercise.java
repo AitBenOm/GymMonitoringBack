@@ -10,7 +10,7 @@ import java.util.List;
 public class Exercise {
     @Id
     @GeneratedValue
-    private Long idExercise;
+    private int idExercise;
     private String exerciseName;
 
     @ManyToOne
@@ -37,11 +37,11 @@ public class Exercise {
 
     }
 
-    public Long getIdExercise() {
+    public int getIdExercise() {
         return idExercise;
     }
 
-    public void setIdExercise(Long idExercise) {
+    public void setIdExercise(int idExercise) {
         this.idExercise = idExercise;
     }
 
