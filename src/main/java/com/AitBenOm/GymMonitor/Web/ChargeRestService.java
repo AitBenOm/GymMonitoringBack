@@ -22,5 +22,12 @@ public class ChargeRestService {
     return loadRepository.getLoadsByExercise(idExercise);
 }
 
+@RequestMapping(value = "/Loads", method = RequestMethod.GET)
+    public List<Charge> getLoads(){
+    return loadRepository.findAll();
+}
+
+
+
 
 }

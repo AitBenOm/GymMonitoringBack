@@ -10,6 +10,6 @@ import java.util.List;
 
 public interface LoadRepository extends JpaRepository<Charge,Integer> {
 
-    @Query("select c from Charge c where c.exercise.idExercise =:x")
+    @Query("select c from Charge c where c.exercise.program.user.idUser =:x")
     List<Charge> getLoadsByExercise(@Param("x") int idExercise);
 }
