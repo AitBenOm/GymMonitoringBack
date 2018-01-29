@@ -17,7 +17,7 @@ public class User {
     private String pwd;
 
     @JsonIgnore
-    @OneToMany(mappedBy="user",fetch=FetchType.EAGER)
+    @OneToMany(mappedBy="user",cascade =CascadeType.ALL, fetch=FetchType.EAGER)
     private List<Program> programList;
 
     public User() {

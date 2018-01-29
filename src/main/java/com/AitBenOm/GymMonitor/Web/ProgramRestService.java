@@ -26,6 +26,10 @@ public class ProgramRestService {
     public List<Program> getPrograms(   @RequestParam(name = "idUser") int idUser){
     return programRepository.getProgramsByUser(idUser);
 }
+@RequestMapping(value = "/Programs", method = RequestMethod.GET)
+    public List<Program> getPrograms(  ){
+    return programRepository.findAll();
+}
 
 
 }

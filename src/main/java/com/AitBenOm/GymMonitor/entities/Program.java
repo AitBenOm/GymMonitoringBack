@@ -34,7 +34,7 @@ public class Program   {
     private User user;
 
     @JsonIgnore
-    @OneToMany(mappedBy="program",fetch=FetchType.EAGER)
+    @OneToMany(mappedBy="program",cascade =CascadeType.ALL, fetch=FetchType.EAGER)
     private List<Exercise> exercises;
 
 

@@ -16,7 +16,7 @@ public class Exercise {
     @ManyToOne
       private Program program;
     @JsonIgnore
-    @OneToMany(mappedBy="exercise",fetch=FetchType.EAGER)
+    @OneToMany(mappedBy="exercise",cascade =CascadeType.ALL, fetch=FetchType.EAGER)
     private List<Charge> charges;
 
 
