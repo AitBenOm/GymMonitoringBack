@@ -46,12 +46,7 @@ public class MonitoringApplication implements CommandLineRunner{
 		program.setUser(user);
 		programRepository.save(program);
 		exercise.setProgram(program);
-		System.out.println("**************************************************");
-		System.out.println(
 
-				exercise.getProgram().getProgramName()
-		);
-		System.out.println("**************************************************");
 		exerciseRepository.save(exercise);
 		charge.setExercise(exercise);
 		loadRepository.save(charge);

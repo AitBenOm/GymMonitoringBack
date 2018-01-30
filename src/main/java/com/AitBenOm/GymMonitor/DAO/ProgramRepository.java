@@ -13,4 +13,9 @@ import java.util.List;
 public interface ProgramRepository extends JpaRepository<Program,Long> {
 
     @Query("select p from Program p where p.user.idUser = :x")
-    public List<Program> getProgramsByUser(@Param("x") int idUser);}
+    public List<Program> getProgramsByUser(@Param("x") int idUser);
+
+    @Query("select p from Program p where p.idProgram = :x")
+    public Program getProgramsById(@Param("x") int idProgram);
+}
+

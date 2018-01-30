@@ -13,7 +13,7 @@ public class Charge {
     @Temporal(TemporalType.DATE)
     private Date lastModification;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     private Exercise exercise;
 
     public int getIdLoad() {
