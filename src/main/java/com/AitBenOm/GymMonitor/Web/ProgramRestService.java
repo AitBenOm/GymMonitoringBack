@@ -21,10 +21,9 @@ public class ProgramRestService {
 
 
     @Autowired
-    private ExerciseRepository exerciseRepository;
+    private ExerciseRestService exerciseRestService ;
 
-    @Autowired
-    private LoadRepository loadRepository;
+
 
     @Autowired
     private ProgramRepository programRepository;
@@ -53,15 +52,12 @@ public class ProgramRestService {
     @RequestMapping(value = "/MyProgram", method = RequestMethod.POST)
     public Program saveContact(@RequestBody Program program){
 
-        User user = new User("omar","ait benaissa","omar.benaissa@outlook.com","123456");
+        System.out.println("Program To Save : "+program);
+        User user = new User();
+        user.setIdUser(1);
 
         program.setUser(user);
         programRepository.save(program);
-        program.getExercises().get(0).setProgram(program);
-        exerciseRepository.save( program.getExercises().get(0));
-        program.getExercises().get(0).getCharges().get(0).setExercise(  program.getExercises().get(0));
-        loadRepository.save(  program.getExercises().get(0).getCharges().get(0));
-
         return  programRepository.save(program);
     }
 
