@@ -26,6 +26,10 @@ public class ChargeRestService {
     public List<Charge> getLoads(){
     return loadRepository.findAll();
 }
+@RequestMapping(value = "/MyLoad/{idLoad}", method = RequestMethod.GET)
+    public Charge getLoadById(@PathVariable int idLoad){
+    return loadRepository.findOne(idLoad);
+}
 
 
     @RequestMapping(value = "/MyLoad", method = RequestMethod.POST)

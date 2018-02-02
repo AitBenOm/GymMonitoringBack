@@ -43,13 +43,13 @@ public class MonitoringApplication implements CommandLineRunner{
 		Program program = new Program("PEC",df.parse("12/12/2014"),df.parse("12/12/2014"));
 		Exercise exercise = new Exercise("Dips");
 		userRepository.save(user);
-		program.setUser(user);
-		programRepository.save(program);
-		exercise.setProgram(program);
-
-		exerciseRepository.save(exercise);
-		charge.setExercise(exercise);
-		loadRepository.save(charge);
+//		program.setUser(user);
+//		programRepository.save(program);
+//		exercise.setProgram(program);
+//
+//		exerciseRepository.save(exercise);
+//		charge.setExercise(exercise);
+//		loadRepository.save(charge);
 
 
 	}
